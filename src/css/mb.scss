@@ -1,0 +1,23 @@
+html{
+    font-size:50px;
+}
+.mb-header{
+    flex:1;
+    background-color: #f6f6f6;
+    header{
+        padding-left: 5px;
+        border-bottom: 1px solid #2db7f5;
+        img{
+            height: 50px;
+        }
+        span{
+            font-size:35px;
+            vertical-align: top;
+            padding-left: 10px;
+            color:#2db7f5;
+        }
+    }
+}
+.mb-footer{
+    text-align: center;
+}
