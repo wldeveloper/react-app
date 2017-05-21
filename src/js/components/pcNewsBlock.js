@@ -31,14 +31,13 @@ class PCNewsBlock extends React.Component{
         const {news} = this.state;
         const newsList = news.length ? news.map((item,index) => (
                 <li key={index}>
-                    <Link to={`/details/${item.uniquekey}`}>
+                    <Link to={`/details/${item.uniquekey}`} target="_blank">
                         {item.title}
                     </Link>
                 </li>
             )) : '没有加载任何新闻！';
 
         return (
-            <Router>
                 <div className="topNewsList">
                     <Card>
                         <ul>
@@ -47,7 +46,6 @@ class PCNewsBlock extends React.Component{
                     </Card>
                     <Route path="/details/:id" component={Child}></Route>
                 </div>
-            </Router>
         )
     }
 }

@@ -17,7 +17,7 @@ class MBHeader extends React.Component{
         current:'toutiao',
         modalVisible:false,
         action:'login',
-        hasLogined:false,
+        hasLogined:true,
         userNickName:'',
         userid:0
       }
@@ -82,7 +82,7 @@ class MBHeader extends React.Component{
         const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = this.props.form;
 
         const userShow = this.state.hasLogined ? 
-        <Link to="">
+        <Link to="/usercenter">
             <Icon type="inbox"></Icon>
         </Link> : 
         <Icon type="setting" onClick={this.login}></Icon>;

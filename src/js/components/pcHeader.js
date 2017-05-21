@@ -76,13 +76,14 @@ class PCHeader extends React.Component{
       + formData.r_password + "&r_confirmPassword="
       + formData.r_confirm, myFetchOptions).then(response => response.json()).then(json => {
         console.log(json)
-             
+        
         this.setState({
           userNickName:json.NickUserName,
-          userid:json.userid
+          userid:json.UserId
         })
-
-        localStorage.userid = json.userid;
+        console.log(localStorage)
+             
+        localStorage.userid = json.UserId;
         localStorage.userNickName = json.NickUserName;
 
         if (this.state.action == "login") {
@@ -117,7 +118,7 @@ class PCHeader extends React.Component{
         const loginedEle = <Menu.Item key="logout" className="logout">
                             <Button type="primary" htmlType="button">{this.state.userNickName}</Button>
                             &nbsp;&nbsp;
-                            <Link to="/" className="person-center">
+                            <Link to={`#/usercenter`} className="person-center" target="_blank">
                               <Button type="dashed" htmlType="button">个人中心</Button>
                             </Link>
                             &nbsp;&nbsp;
